@@ -41,7 +41,7 @@ def update_result(*args):
 
         ax.axvline(x, color='red', linestyle='--', label=f"x = {x}")
 
-        ax.set_title("正規分布と条件付き期待値")
+        ax.set_title("条件付き期待値")
         ax.set_xlabel("x")
         ax.set_ylabel("確率密度")
         ax.legend()
