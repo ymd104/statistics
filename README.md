@@ -13,3 +13,6 @@
 
 ## bivariate_normal_distribution_conditional_expectation.py
 2変量正規分布の条件付き期待値を図示したもの。
+
+## dw_statistics.py
+ホワイトノイズと自己相関のあるAR(1)過程とでグラフを比較するとともに、DW比を計算する。
