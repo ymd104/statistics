@@ -4,9 +4,9 @@ from scipy.stats import norm
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-import japanize_matplotlib
+import matplotlib_fontja
 
-japanize_matplotlib.japanize()
+matplotlib_fontja.japanize()
 
 
 def update_result(*args):
