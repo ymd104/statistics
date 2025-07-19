@@ -19,7 +19,7 @@ def generate_errors_ar1(rho, n):
     u = np.random.normal(0, 1, n)
     e = np.zeros(n)
     for t in range(1, n):
-        e[t] = rho * e[t-1] + u[t]
+        e[t] = rho * e[t - 1] + u[t]
     return e
 
 
@@ -47,17 +47,17 @@ t = np.arange(n)
 plt.figure(figsize=(12, 5))
 
 plt.subplot(1, 2, 1)
-plt.plot(t, eps_iid, color='skyblue')
-plt.title('ホワイトノイズの誤差（iid）')
-plt.xlabel('時刻')
-plt.ylabel('誤差')
+plt.plot(t, eps_iid, color="skyblue")
+plt.title("ホワイトノイズの誤差（iid）")
+plt.xlabel("時刻")
+plt.ylabel("誤差")
 plt.grid(True)
 
 plt.subplot(1, 2, 2)
-plt.plot(t, eps_ar, color='salmon')
-plt.title(f'自己相関ありの誤差（AR(1), ρ={rho}）')
-plt.xlabel('時刻')
-plt.ylabel('誤差')
+plt.plot(t, eps_ar, color="salmon")
+plt.title(f"自己相関ありの誤差（AR(1), ρ={rho}）")
+plt.xlabel("時刻")
+plt.ylabel("誤差")
 plt.grid(True)
 
 plt.tight_layout()

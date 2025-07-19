@@ -11,15 +11,17 @@ matplotlib_fontja.japanize()
 
 def plot_contour(mu1, mu2, sigma1, sigma2, rho):
     ax.clear()
-    x = np.linspace(mu1 - 3*sigma1, mu1 + 3*sigma1, 100)
-    y = np.linspace(mu2 - 3*sigma2, mu2 + 3*sigma2, 100)
+    x = np.linspace(mu1 - 3 * sigma1, mu1 + 3 * sigma1, 100)
+    y = np.linspace(mu2 - 3 * sigma2, mu2 + 3 * sigma2, 100)
     X, Y = np.meshgrid(x, y)
 
     # 2変量正規分布の確率密度関数
     Z = (
-        1 / (2 * np.pi * sigma1 * sigma2 * np.sqrt(1 - rho**2))
+        1
+        / (2 * np.pi * sigma1 * sigma2 * np.sqrt(1 - rho**2))
         * np.exp(
-            -1 / (2 * (1 - rho**2))
+            -1
+            / (2 * (1 - rho**2))
             * (
                 ((X - mu1) / sigma1) ** 2
                 - 2 * rho * ((X - mu1) / sigma1) * ((Y - mu2) / sigma2)

@@ -33,13 +33,15 @@ def update_result(*args):
         ax.clear()
         x_vals = np.linspace(mu - 4 * sigma, mu + 4 * sigma, 500)
         y_vals = norm.pdf(x_vals, loc=mu, scale=sigma)
-        ax.plot(x_vals, y_vals, label="正規分布", color='blue')
+        ax.plot(x_vals, y_vals, label="正規分布", color="blue")
 
         fill_x = np.linspace(x, mu + 4 * sigma, 300)
         fill_y = norm.pdf(fill_x, loc=mu, scale=sigma)
-        ax.fill_between(fill_x, fill_y, color='orange', alpha=0.5, label="X >= x の領域")
+        ax.fill_between(
+            fill_x, fill_y, color="orange", alpha=0.5, label="X >= x の領域"
+        )
 
-        ax.axvline(x, color='red', linestyle='--', label=f"x = {x}")
+        ax.axvline(x, color="red", linestyle="--", label=f"x = {x}")
 
         ax.set_title("条件付き期待値")
         ax.set_xlabel("x")
@@ -73,8 +75,9 @@ ttk.Entry(frame, textvariable=sigma_var, width=10).grid(column=1, row=1)
 ttk.Label(frame, text="x (しきい値):").grid(column=0, row=2, sticky="e")
 ttk.Entry(frame, textvariable=x_var, width=10).grid(column=1, row=2)
 
-ttk.Label(frame, textvariable=result_var, font=("Arial", 12, "bold"),
-          padding=[0, 20, 0, 10]).grid(column=0, row=4, columnspan=2)
+ttk.Label(
+    frame, textvariable=result_var, font=("Arial", 12, "bold"), padding=[0, 20, 0, 10]
+).grid(column=0, row=4, columnspan=2)
 
 # --- グラフ描画エリア ---
 fig, ax = plt.subplots(figsize=(4, 2.5), dpi=50)

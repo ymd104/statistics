@@ -24,15 +24,16 @@ y_g = g(x)
 
 # グラフ描画
 plt.figure(figsize=(8, 5))
-plt.plot(x, y_f, label=r'$f(x) = \varphi(x)$', color='blue')
-plt.plot(x, y_g, label=r'$g(x) = x \cdot \left[(1 - \Phi(x)) - x\right]$',
-         color='orange')
+plt.plot(x, y_f, label=r"$f(x) = \varphi(x)$", color="blue")
+plt.plot(
+    x, y_g, label=r"$g(x) = x \cdot \left[(1 - \Phi(x)) - x\right]$", color="orange"
+)
 
 # 装飾
 plt.title("f(x) と g(x) のグラフ")
 plt.xlabel("x")
 plt.ylabel("y")
-plt.axhline(0, color='gray', linestyle='--')
+plt.axhline(0, color="gray", linestyle="--")
 plt.grid(True)
 plt.legend()
 plt.tight_layout()
