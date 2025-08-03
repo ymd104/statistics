@@ -46,3 +46,6 @@ EMアルゴリズム
 
 ### pcl
 主成分負荷量について試す
+
+## monte_carlo_integration
+モンテカルロ積分
